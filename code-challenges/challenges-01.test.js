@@ -16,6 +16,7 @@ const speaker = (message, callback) => {
   return callback(message);
 };
 
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
