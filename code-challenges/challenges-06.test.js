@@ -74,14 +74,9 @@ const templatingWithMustache = () => {
 
   characters.forEach(character => {
     let $template = $('#template').html();
-
     templateArray.push(Mustache.render($template, character));
   });
   return templateArray;
-  // let object = obj.toString(characters);
-  // // console.log(object);
-  // // var tmp = '<ul>{{#.}}<li>{{name}}</li>{{/.}}</ul>';
-  // Mustache.render(object.keys);
 };
 
 /* ------------------------------------------------------------------------------------------------
