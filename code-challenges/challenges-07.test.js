@@ -64,7 +64,7 @@ const mapTwoToThe = (arr) => {
   arr.map((value => {
     myArr.push(Math.pow(2, value));
   }));
-  return myArr;
+  return myArr;//Return
 };
 
 /* ------------------------------------------------------------------------------------------------
