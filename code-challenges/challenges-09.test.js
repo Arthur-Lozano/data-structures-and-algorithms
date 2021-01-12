@@ -26,7 +26,7 @@ const createServer = () => {
   const app = express();
 
   // Routes go here
-  app.get('/events', mapCurrentEvents);
+  app.get('/events', getCurrentEvents);
   // Solution code here...
 
   var server = app.listen(3301, function () {
@@ -158,346 +158,378 @@ const currentEvents = {
       url: "https://bgr.com/2020/04/13/coronavirus-mask-effectiveness-surgical-how-to/"
     }
   ]
-}
+};
 
 function getCurrentEvents(request, response) {
   response.status(200).send(mapCurrentEvents());
+}
 
-  const mapCurrentEvents = () => {
-    const currentEventsArray = currentEvents.news.map(value => {
-      return new Event(value);
-    });
-    return currentEventsArray;
-  }
-  function Event(obj) {
-    this.author = obj.autho;
-    this.categories = obj.category[0];
-    this.summary = obj.description;
-    this.img_url = obj.image;
-    this.date = obj.published;
-    this.title = obj.title;
-  }
 
-  /* ------------------------------------------------------------------------------------------------
-  CHALLENGE 2
-  
-  Write a function named countNumberOfElements that, given an array as input, uses reduce to count the number of elements in the array.
-  
-  Note: You may not use the array's built-in length property.
-  ------------------------------------------------------------------------------------------------ */
+const mapCurrentEvents = () => {
+  const currentEventsArray = currentEvents.news.map(value => {
+    return new Event(value);
+  });
+  return currentEventsArray;
+};
 
-  const countNumberOfElements = (arr) => {
-    const x = arr.reduce((total) => {
-      return total + 1;
-    }, 0);
-    return x;
-  };
+function Event(obj) {
+  this.author = obj.author;
+  this.categories = obj.category;
+  this.summary = obj.description;
+  this.img_url = obj.image;
+  this.date = obj.published;
+  this.title = obj.title;
+}
 
-  /* ------------------------------------------------------------------------------------------------
-  CHALLENGE 3
-  
-  Write a function named returnNames that, given the Star Wars data, below, uses reduce to return an array containing the names of the characters.
-  ------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------
+CHALLENGE 2
+ 
+Write a function named countNumberOfElements that, given an array as input, uses reduce to count the number of elements in the array.
+ 
+Note: You may not use the array's built-in length property.
+------------------------------------------------------------------------------------------------ */
 
-  let starWarsData = [{
-    name: 'Luke Skywalker',
-    height: '172',
-    mass: '77',
-    hair_color: 'blond',
-    skin_color: 'fair',
-    eye_color: 'blue',
-    birth_year: '19BBY',
-    gender: 'male',
+const countNumberOfElements = (arr) => {
+  const x = arr.reduce((total) => {
+    return total + 1;
+  }, 0);
+  return x;
+};
+
+/* ------------------------------------------------------------------------------------------------
+CHALLENGE 3
+ 
+Write a function named returnNames that, given the Star Wars data, below, uses reduce to return an array containing the names of the characters.
+------------------------------------------------------------------------------------------------ */
+
+let starWarsData = [{
+  name: 'Luke Skywalker',
+  height: '172',
+  mass: '77',
+  hair_color: 'blond',
+  skin_color: 'fair',
+  eye_color: 'blue',
+  birth_year: '19BBY',
+  gender: 'male',
+},
+{
+  name: 'C-3PO',
+  height: '167',
+  mass: '75',
+  hair_color: 'n/a',
+  skin_color: 'gold',
+  eye_color: 'yellow',
+  birth_year: '112BBY',
+  gender: 'n/a'
+},
+{
+  name: 'R2-D2',
+  height: '96',
+  mass: '32',
+  hair_color: 'n/a',
+  skin_color: 'white, blue',
+  eye_color: 'red',
+  birth_year: '33BBY',
+  gender: 'n/a'
+},
+{
+  name: 'Darth Vader',
+  height: '202',
+  mass: '136',
+  hair_color: 'none',
+  skin_color: 'white',
+  eye_color: 'yellow',
+  birth_year: '41.9BBY',
+  gender: 'male'
+},
+{
+  name: 'Leia Organa',
+  height: '150',
+  mass: '49',
+  hair_color: 'brown',
+  skin_color: 'light',
+  eye_color: 'brown',
+  birth_year: '19BBY',
+  gender: 'female'
+}];
+
+const returnNames = (arr) => {
+  const x = arr.reduce((people, value, index) => {
+    people[index] = value.name;
+    return people;
+  }, []);
+  return x;
+};
+
+/* ------------------------------------------------------------------------------------------------
+CHALLENGE 4
+ 
+Write a function named reversedString that takes in a string and returns a string with the letters in reverse order.
+ 
+Note: You must use reduce for this challenge. You may not use the built-in .reverse() string method.
+------------------------------------------------------------------------------------------------ */
+
+const reversedString = (str) => {
+  const outPut = str.split('');
+  const x = outPut.reduce((acc, val, xay) => {
+    acc.unshift(val);
+    return acc;
+  }, []);
+  return x.join('');
+};
+
+/* ------------------------------------------------------------------------------------------------
+CHALLENGE 5 - Stretch Goal
+ 
+Write a function named countNumberOfChildren that, given the array of characters, below, uses reduce to return the total number of children in the data set.
+------------------------------------------------------------------------------------------------ */
+
+const characters = [
+  {
+    name: 'Eddard',
+    spouse: 'Catelyn',
+    children: ['Robb', 'Sansa', 'Arya', 'Bran', 'Rickon'],
+    house: 'Stark',
   },
   {
-    name: 'C-3PO',
-    height: '167',
-    mass: '75',
-    hair_color: 'n/a',
-    skin_color: 'gold',
-    eye_color: 'yellow',
-    birth_year: '112BBY',
-    gender: 'n/a'
+    name: 'Jon',
+    spouse: 'Lysa',
+    children: ['Robin'],
+    house: 'Arryn',
   },
   {
-    name: 'R2-D2',
-    height: '96',
-    mass: '32',
-    hair_color: 'n/a',
-    skin_color: 'white, blue',
-    eye_color: 'red',
-    birth_year: '33BBY',
-    gender: 'n/a'
+    name: 'Cersei',
+    spouse: 'Robert',
+    children: ['Joffrey', 'Myrcella', 'Tommen'],
+    house: 'Lannister',
   },
   {
-    name: 'Darth Vader',
-    height: '202',
-    mass: '136',
-    hair_color: 'none',
-    skin_color: 'white',
-    eye_color: 'yellow',
-    birth_year: '41.9BBY',
-    gender: 'male'
+    name: 'Daenarys',
+    spouse: 'Khal Drogo',
+    children: ['Drogon', 'Rhaegal', 'Viserion'],
+    house: 'Targaryen',
   },
   {
-    name: 'Leia Organa',
-    height: '150',
-    mass: '49',
-    hair_color: 'brown',
-    skin_color: 'light',
-    eye_color: 'brown',
-    birth_year: '19BBY',
-    gender: 'female'
-  }];
+    name: 'Mace',
+    spouse: 'Alerie',
+    children: ['Margaery', 'Loras'],
+    house: 'Tyrell',
+  },
+  {
+    name: 'Sansa',
+    spouse: 'Tyrion',
+    house: 'Stark',
+  },
+  {
+    name: 'Jon',
+    spouse: null,
+    house: 'Snow',
+  },
+];
 
-  const returnNames = (arr) => {
-    const x = arr.reduce((people.value, index => {
-      people[index] = value.name;
-      return people;
-    }, []),
-     x)
-  };
+const countNumberOfChildren = (arr) => {
+  characters
+};
 
-  /* ------------------------------------------------------------------------------------------------
-  CHALLENGE 4
-  
-  Write a function named reversedString that takes in a string and returns a string with the letters in reverse order.
-  
-  Note: You must use reduce for this challenge. You may not use the built-in .reverse() string method.
-  ------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------
+CHALLENGE 6 - Stretch Goal
+ 
+Write a function that, given an array of numbers as input, uses reduce to calculate the array's average value.
+ 
+Hint: The accumulator should begin as { count: 0, sum: 0 }
+------------------------------------------------------------------------------------------------ */
 
-  const reversedString = (str) => {
-    // Solution code here...
-  };
-
-  /* ------------------------------------------------------------------------------------------------
-  CHALLENGE 5 - Stretch Goal
-  
-  Write a function named countNumberOfChildren that, given the array of characters, below, uses reduce to return the total number of children in the data set.
-  ------------------------------------------------------------------------------------------------ */
-
-  const characters = [
-    {
-      name: 'Eddard',
-      spouse: 'Catelyn',
-      children: ['Robb', 'Sansa', 'Arya', 'Bran', 'Rickon'],
-      house: 'Stark',
-    },
-    {
-      name: 'Jon',
-      spouse: 'Lysa',
-      children: ['Robin'],
-      house: 'Arryn',
-    },
-    {
-      name: 'Cersei',
-      spouse: 'Robert',
-      children: ['Joffrey', 'Myrcella', 'Tommen'],
-      house: 'Lannister',
-    },
-    {
-      name: 'Daenarys',
-      spouse: 'Khal Drogo',
-      children: ['Drogon', 'Rhaegal', 'Viserion'],
-      house: 'Targaryen',
-    },
-    {
-      name: 'Mace',
-      spouse: 'Alerie',
-      children: ['Margaery', 'Loras'],
-      house: 'Tyrell',
-    },
-    {
-      name: 'Sansa',
-      spouse: 'Tyrion',
-      house: 'Stark',
-    },
-    {
-      name: 'Jon',
-      spouse: null,
-      house: 'Snow',
-    },
-  ];
-
-  const countNumberOfChildren = (arr) => {
-    // Solution code here...
-  };
-
-  /* ------------------------------------------------------------------------------------------------
-  CHALLENGE 6 - Stretch Goal
-  
-  Write a function that, given an array of numbers as input, uses reduce to calculate the array's average value.
-  
-  Hint: The accumulator should begin as { count: 0, sum: 0 }
-  ------------------------------------------------------------------------------------------------ */
-
-  const calculateAverage = (arr) => {
-    // Solution code here...
-  };
-
-  /* ------------------------------------------------------------------------------------------------
-  CHALLENGE 7 - Stretch Goal
-  
-  Write a function named countPrimeNumbers that, given an array elements as input, uses reduce to count the number of elements that are prime numbers.
-  
-  You are welcome to use the provided isPrime function.
-  ------------------------------------------------------------------------------------------------ */
-
-  const isPrime = (value) => {
-    for (let i = 2; i < value; i++) {
-      if (value % i === 0) {
-        return false;
-      }
+const calculateAverage = (arr) => {
+  const holder = arr.reduce((acc, val, idx) => {
+    acc += val;
+    if (idx === arr.length - 1) {
+      ac = acc / arr.length;
     }
-    return value > 1;
-  };
+    return acc;
+  }, 0)
+  return holder
+};
 
-  const countPrimeNumbers = (arr) => {
-    // Solution code here...
-  };
+/* ------------------------------------------------------------------------------------------------
+CHALLENGE 7 - Stretch Goal
+ 
+Write a function named countPrimeNumbers that, given an array elements as input, uses reduce to count the number of elements that are prime numbers.
+ 
+You are welcome to use the provided isPrime function.
+------------------------------------------------------------------------------------------------ */
 
-  /* ------------------------------------------------------------------------------------------------
-  CHALLENGE 8 - Stretch Goal
-  
-  Write a function named extractState that, given the snorlaxData, below, uses reduce to return the object whose 'name' property matches the given string.
-  
-  If the input array does not have a stat with that specific name, the function should return null.
-  ------------------------------------------------------------------------------------------------ */
+const isPrime = (value) => {
+  for (let i = 2; i < value; i++) {
+    if (value % i === 0) {
+      return false;
+    }
+  }
+  return value > 1;
+};
 
-  const snorlaxData = {
-    stats: [
-      {
-        stat: {
-          url: 'https://pokeapi.co/api/v2/stat/6/',
-          name: 'speed',
-        },
-        effort: 5,
-        baseStat: 30,
+const countPrimeNumbers = (arr) => {
+  const holder = arr.reduce((acc, val, idx) => {
+    if (isPrime(val)) {
+      acc++
+    }
+    return acc;
+  })
+  return holder;
+};
+
+/* ------------------------------------------------------------------------------------------------
+CHALLENGE 8 - Stretch Goal
+ 
+Write a function named extractState that, given the snorlaxData, below, uses reduce to return the object whose 'name' property matches the given string.
+ 
+If the input array does not have a stat with that specific name, the function should return null.
+------------------------------------------------------------------------------------------------ */
+
+const snorlaxData = {
+  stats: [
+    {
+      stat: {
+        url: 'https://pokeapi.co/api/v2/stat/6/',
+        name: 'speed',
       },
-      {
-        stat: {
-          url: 'https://pokeapi.co/api/v2/stat/5/',
-          name: 'special-defense',
-        },
-        effort: 2,
-        baseStat: 110,
+      effort: 5,
+      baseStat: 30,
+    },
+    {
+      stat: {
+        url: 'https://pokeapi.co/api/v2/stat/5/',
+        name: 'special-defense',
       },
-      {
-        stat: {
-          url: 'https://pokeapi.co/api/v2/stat/4/',
-          name: 'special-attack',
-        },
-        effort: 9,
-        baseStat: 65,
+      effort: 2,
+      baseStat: 110,
+    },
+    {
+      stat: {
+        url: 'https://pokeapi.co/api/v2/stat/4/',
+        name: 'special-attack',
       },
-    ],
-    name: 'snorlax',
-    weight: 4600,
-  };
+      effort: 9,
+      baseStat: 65,
+    },
+  ],
+  name: 'snorlax',
+  weight: 4600,
+};
 
-  const extractStat = (statName, arr) => {
-    // Solution code here...
-  };
+const extractStat = (statName, arr) => {
+  let flag = true;
+  const holder = arr.reduce(statName, arr) => {
+    if(statName===val.state.name){
+      acc=val;
+      flag=false
+    }
+    if(flag){
+      acc=null;
+    }
+    return acc;
+  },{})
+  return holder;
+};
 
-  /* ------------------------------------------------------------------------------------------------
-  CHALLENGE 9 - Stretch Goal
-  
-  Write a function named extractChildren that, given the array of characters from challenge 4, accomplishes the following:
-  
-  1) Uses filter to return an array of the characters that contain the letter 'a' in their name
-  
-  2) Then, uses reduce to return an array of all the children's names in the filtered array
-  ------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------
+CHALLENGE 9 - Stretch Goal
+ 
+Write a function named extractChildren that, given the array of characters from challenge 4, accomplishes the following:
+ 
+1) Uses filter to return an array of the characters that contain the letter 'a' in their name
+ 
+2) Then, uses reduce to return an array of all the children's names in the filtered array
+------------------------------------------------------------------------------------------------ */
 
-  const extractChildren = (arr) => {
-    // Solution code here...
-  };
+const extractChildren = (arr) => {
+  // Solution code here...
+};
 
-  /* ------------------------------------------------------------------------------------------------
-  TESTS
-  
-  All the code below will verify that your functions are working to solve the challenges.
-  
-  DO NOT CHANGE any of the below code.
-  
-  Run your tests from the console: jest challenges-09.test.js
-  ------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------
+TESTS
+ 
+All the code below will verify that your functions are working to solve the challenges.
+ 
+DO NOT CHANGE any of the below code.
+ 
+Run your tests from the console: jest challenges-09.test.js
+------------------------------------------------------------------------------------------------ */
 
-  describe('Testing challenge 1', () => {
-    test('It should return an array of object instances with a key of author', () => {
-      expect(mapCurrentEvents()[0].author).toStrictEqual("go");
-    });
-
-    test('It should return an array of object instances with a key of categories', () => {
-      expect(mapCurrentEvents()[0].categories).toStrictEqual(["world"]);
-    });
-    const request = require('supertest');
-
-    let server;
-
-    beforeEach(function () {
-      server = createServer();
-    });
-
-    afterEach(function () {
-      server.close();
-    });
-
-    test('responds to /events', function testSlash(done) {
-      request(server)
-        .get('/events')
-        .expect(200, done);
-    });
-
-    test('404 everything else', function testPath(done) {
-      request(server)
-        .get('/foo/bar')
-        .expect(404, done);
-    });
+describe('Testing challenge 1', () => {
+  test('It should return an array of object instances with a key of author', () => {
+    expect(mapCurrentEvents()[0].author).toStrictEqual("go");
   });
 
-  describe('Testing challenge 2', () => {
-    test('It should return the length of the array', () => {
-      expect(countNumberOfElements([1, 2, 3, 4, 5])).toStrictEqual(5);
-    });
+  test('It should return an array of object instances with a key of categories', () => {
+    expect(mapCurrentEvents()[0].categories).toStrictEqual(["world"]);
+  });
+  const request = require('supertest');
+
+  let server;
+
+  beforeEach(function () {
+    server = createServer();
   });
 
-  describe('Testing challenge 3', () => {
-    test('It should return an array continaing the names of the characters', () => {
-      expect(returnNames(starWarsData)).toStrictEqual(['Luke Skywalker', 'C-3PO', 'R2-D2', 'Darth Vader', 'Leia Organa']);
-      expect(returnNames(starWarsData).length).toStrictEqual(5);
-    });
+  afterEach(function () {
+    server.close();
   });
 
-  describe('Testing challenge 4', () => {
-    test('It should return the string with the characters in reverse order', () => {
-      expect(reversedString('Code 301')).toStrictEqual('103 edoC');
-    });
+  test('responds to /events', function testSlash(done) {
+    request(server)
+      .get('/events')
+      .expect(200, done);
   });
 
-  xdescribe('Testing challenge 5', () => {
-    test('It should return the total number of children', () => {
-      expect(countNumberOfChildren(characters)).toStrictEqual(14);
-    });
+  test('404 everything else', function testPath(done) {
+    request(server)
+      .get('/foo/bar')
+      .expect(404, done);
   });
+});
 
-  xdescribe('Testing challenge 6', () => {
-    test('It should return the average of the numbers in the array', () => {
-      expect(calculateAverage([18, 290, 37, 4, 55, 16, 7, 85])).toStrictEqual(64);
-    });
+describe('Testing challenge 2', () => {
+  test('It should return the length of the array', () => {
+    expect(countNumberOfElements([1, 2, 3, 4, 5])).toStrictEqual(5);
   });
+});
 
-  xdescribe('Testing challenge 7', () => {
-    test('It should return a count of the prime numbers in the array', () => {
-      expect(countPrimeNumbers([1, 2, 13, 64, 45, 56, 17, 8])).toStrictEqual(3);
-    });
+describe('Testing challenge 3', () => {
+  test('It should return an array continaing the names of the characters', () => {
+    expect(returnNames(starWarsData)).toStrictEqual(['Luke Skywalker', 'C-3PO', 'R2-D2', 'Darth Vader', 'Leia Organa']);
+    expect(returnNames(starWarsData).length).toStrictEqual(5);
   });
+});
 
-  xdescribe('Testing challenge 8', () => {
-    test('It should return any stats that match the input', () => {
-      expect(extractStat('speed', snorlaxData.stats)).toStrictEqual({ stat: { url: 'https://pokeapi.co/api/v2/stat/6/', name: 'speed' }, effort: 5, baseStat: 30 });
-    });
+describe('Testing challenge 4', () => {
+  test('It should return the string with the characters in reverse order', () => {
+    expect(reversedString('Code 301')).toStrictEqual('103 edoC');
   });
+});
+
+xdescribe('Testing challenge 5', () => {
+  test('It should return the total number of children', () => {
+    expect(countNumberOfChildren(characters)).toStrictEqual(14);
+  });
+});
+
+xdescribe('Testing challenge 6', () => {
+  test('It should return the average of the numbers in the array', () => {
+    expect(calculateAverage([18, 290, 37, 4, 55, 16, 7, 85])).toStrictEqual(64);
+  });
+});
+
+xdescribe('Testing challenge 7', () => {
+  test('It should return a count of the prime numbers in the array', () => {
+    expect(countPrimeNumbers([1, 2, 13, 64, 45, 56, 17, 8])).toStrictEqual(3);
+  });
+});
+
+xdescribe('Testing challenge 8', () => {
+  test('It should return any stats that match the input', () => {
+    expect(extractStat('speed', snorlaxData.stats)).toStrictEqual({ stat: { url: 'https://pokeapi.co/api/v2/stat/6/', name: 'speed' }, effort: 5, baseStat: 30 });
+  });
+});
 
   // xdescribe('Testing challenge 9', () => {
   //   test('It should return an array containing the names of the children', () => {
