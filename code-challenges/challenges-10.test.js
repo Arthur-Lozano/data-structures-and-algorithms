@@ -38,6 +38,18 @@ Note: You might need to use the same method more than once.
 For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 ------------------------------------------------------------------------------------------------ */
 
+
+// const count = (target, input) => {
+//   const x = input.reduce((acc, value)=>{
+//     value.forEach(value =>{
+//       if (value === target){
+//         acc++;
+//       }
+//     }),
+//     return acc;
+//   },0);
+//   return x;
+// };
 const count = (target, input) => {
   var count = 0;
   input.filter(outerArr => {
@@ -85,12 +97,18 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 ------------------------------------------------------------------------------------------------ */
 
 const divisibleByFiveTwoToThePower = (input) => {
-  var count = 0;
-  input.filter(outerArr => {
-    outerArr.filter(inArray => {
-      input.push(count);
+  const x = input.map(value => {
+    const y = value.filter( value => {
+      return value % 5 === 0
+    }).filter(value => {
+      return typeof (value) === typeof (2)
+    }).map(value => {
+      return Math.pow(2, value);
     });
+    return y;
   });
+  return x;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 - Stetch Goal
