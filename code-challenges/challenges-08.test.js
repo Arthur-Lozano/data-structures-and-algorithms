@@ -52,20 +52,13 @@ For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 
 const filterStringsWithVowels = (arr) => {
   // For every element (word) in array we will...
   return arr.map((value) => {
-    //  ...convert the word to an array with only characters...
-    return (value.split('').map((char) => {
-      // ...and map will only return those matching the regex expression
-      // (a || e || i || o || u)
-      // parameter /i makes it case insensitive
-      // parameter /g makes it global so it does not return after 
-      // finding first match or "only one"
-      return char.match(/^[aeiou]/i);
-      // After getting an array with only the vowels the join function
-      // converts it to a string, thus returning the desired value
-    })).join('');
+
+    value.filter(str => /^[aeiou]/i.test(str));
+    // return (value.split('').map((char) => {
+    //   return char.match(/^[b-z&&[^aeiou]]+$/);
+    // })).join('');
   });
 };
-
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -76,6 +69,8 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 ------------------------------------------------------------------------------------------------ */
 
 const notInFirstArray = (forbiddenValues, arr) => {
+
+  forbiddenValues.filter(arr);
   // Solution code here...
 };
 
