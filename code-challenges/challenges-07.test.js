@@ -33,11 +33,7 @@ You may choose to complete this challenge using a for loop, for...in syntax, or 
 For example, twoToThe([21,,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and 2 ^ 3 = 8.
 ------------------------------------------------------------------------------------------------ */
 const forLoopTwoToThe = (arr) => {
-  const myArr = [];
-  for (let i = 0; i < arr.length; i++) {
-    myArr.push(Math.pow(2, arr[i]));
-  }
-  return myArr;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -47,11 +43,7 @@ Write a function named forEachTwoToThe that produces the same output as your for
 ------------------------------------------------------------------------------------------------ */
 
 const forEachTwoToThe = (arr) => {
-  const myArr = [];
-  arr.forEach((arr, idx) => {
-    myArr.push(Math.pow(2, arr));
-  });
-  return myArr;
+
 };
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -60,11 +52,7 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 ------------------------------------------------------------------------------------------------ */
 
 const mapTwoToThe = (arr) => {
-  const myArr = [];
-  arr.map((value => {
-    myArr.push(Math.pow(2, value));
-  }));
-  return myArr;//Return
+
 };
 
 /* ------------------------------------------------------------------------------------------------

@@ -9,20 +9,11 @@ Write a function named sayHello, that sends the message 'Hello from the back-end
 
 // Express sever here
 const createServer = () => {
-  const express = require('express');
-  const app = express();
-  app.get('/hello', sayHello);
 
-  var server = app.listen(3301, function () {
-    var port = server.address().port;
-    console.log('Example app listening at port', port);
-  });
-  return server;
 };
 
 
 function sayHello(request, response) {
-  response.send('Hello from the back-end');
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -34,9 +25,7 @@ For example, oddValues([1,2,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
 const oddValues = (arr) => {//updated
-  const odds = arr.filter(value => value % 2);
-  return odds;
-  // console.log(odds);
+ 
 };
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -50,14 +39,7 @@ For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 
 
 
 const filterStringsWithVowels = (arr) => {
-  // For every element (word) in array we will...
-  return arr.map((value) => {
 
-    value.filter(str => /^[aeiou]/i.test(str));
-    // return (value.split('').map((char) => {
-    //   return char.match(/^[b-z&&[^aeiou]]+$/);
-    // })).join('');
-  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -70,8 +52,6 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 
 const notInFirstArray = (forbiddenValues, arr) => {
 
-  forbiddenValues.filter(arr);
-  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------

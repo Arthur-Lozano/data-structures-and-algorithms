@@ -9,13 +9,13 @@ Then, write a function named speaker that takes in a string and a callback funct
 ------------------------------------------------------------------------------------------------ */
 
 const greeting = (word) => {
-  return word.toUpperCase();
+  var newWord = word.toUpperCase();
+  return newWord;
 };
 
 const speaker = (message, callback) => {
   return callback(message);
 };
-
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -32,20 +32,17 @@ Within the addNumbers function, invoke the callback function as many times as ne
 
 Return the modified array.
 ------------------------------------------------------------------------------------------------ */
-
 const addValues = (arr, value) => {
   arr.push(value);
 };
 
 const addNumbers = (num, arr, times, callback) => {
-  for (var i = 0; i < times; i++) {
-    callback(arr, num);
+  for (let i = 0; i <= times.length; i++) {
+    callback(num, arr);
   }
   return arr;
-
-  // arr.forEach(element => console.log(element));
-  // callback
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 
@@ -66,13 +63,13 @@ This function should use forEach to populate your grocery list based on the stor
 ------------------------------------------------------------------------------------------------ */
 
 const createList = (availableItems) => {
-  const newArr = [];
+  let groceryList = []; //Array out of forEach
   availableItems.forEach(value => {
     if (value.available) {
-      newArr.push(value.name);
+      groceryList.push(value.name);
     }
   });
-  return newArr;
+  return groceryList;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -90,20 +87,22 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = (arr) => {
-  const newArr = [];
   arr.forEach(value => {
-    if (value % 3 === 0 && value % 5 === 0) {
-      newArr.push('Fizz Buzz');
+    if (value % 3 || 5 === 0) {
+      console.log('Fizz Buzz');
     }
-    else if (value % 3 === 0) {
-      newArr.push('Fizz');
-    } else if (value % 5 === 0) {
-      newArr.push('Buzz');
-    } else {
-      newArr.push(value);
+    if (value % 3 === 0) {
+      console.log('Fizz');
     }
+    if (value % 5 === 0) {
+      console.log('Buzz');
+    }
+    else {
+      console.log(value);
+    }
+
   });
-  return newArr;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
