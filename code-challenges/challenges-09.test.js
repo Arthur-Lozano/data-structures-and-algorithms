@@ -30,10 +30,7 @@ const createServer = () => {
   // Solution code here...
 
   var server = app.listen(3301, function () {
-    var port = server.address().port;
-    console.log('Example app listening at port', port);
-  });
-  return server;
+   
 };
 
 const currentEvents = {
@@ -166,19 +163,11 @@ function getCurrentEvents(request, response) {
 
 
 const mapCurrentEvents = () => {
-  const currentEventsArray = currentEvents.news.map(value => {
-    return new Event(value);
-  });
-  return currentEventsArray;
+
 };
 
 function Event(obj) {
-  this.author = obj.author;
-  this.categories = obj.category;
-  this.summary = obj.description;
-  this.img_url = obj.image;
-  this.date = obj.published;
-  this.title = obj.title;
+ 
 }
 
 /* ------------------------------------------------------------------------------------------------

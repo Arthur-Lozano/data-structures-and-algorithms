@@ -70,13 +70,7 @@ let $ = createSnippetWithJQuery(`
 `);
 
 const templatingWithMustache = () => {
-  const templateArray = [];
 
-  characters.forEach(character => {
-    let $template = $('#template').html();
-    templateArray.push(Mustache.render($template, character));
-  });
-  return templateArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
