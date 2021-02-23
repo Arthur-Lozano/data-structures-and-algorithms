@@ -9,3 +9,4 @@ An array needs to be able to come into the function one way and be reversed as i
 
 ## Solution
 <!-- Embedded whiteboard image -->
+![CC1](./assets/.png);
