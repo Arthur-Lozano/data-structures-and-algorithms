@@ -1,12 +1,16 @@
+# Shift Array
 
-# Challenge Summary
-<!-- Short summary or background information -->
+### 
 
-## Challenge Description
-<!-- Description of the challenge -->
+- Insert a new value into the middle of an array without using any built in methods
+
+
+## Challenge
+Write a function called insertShiftArray which takes in an array and the value to be added. Without utilizing any of the built-in methods available to your language, return an array with the new value added at the middle index.
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+A math method with a loop and a push to an array that is returned 
 
 ## Solution
 <!-- Embedded whiteboard image -->
+![CC1](./assets/array-shit.png);
