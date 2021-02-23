@@ -27,5 +27,5 @@ A math method with a loop and a push to an array that is returned
 
 ## Solution
 <!-- Embedded whiteboard image -->
-![CC1](./assets/array-shift.png);
+![CC1](./javascriptcode-challenges/arrayShift/shiftArray.png);
 
