@@ -1,5 +1,9 @@
 # Reverse an Array
-An array needs to be able to come into the function one way and be reversed as it exits the function
+
+Write a function that reverses an array, in place
+
+Be careful of: empty arrays, arrays with only 1, odd numbered count, even numbered count
+<!-- Short summary or background information -->
 
 ## Challenge
 <!-- Description of the challenge -->
@@ -7,9 +11,15 @@ An array needs to be able to come into the function one way and be reversed as i
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
+- Identify the start and end of the array (0 and length -1)
+- Swap the arr[start] with arr[end]
+- Move Start forward by 1
+- Move End backwards by 1
+- Repeat while start <= end
+
 ## Solution
 <!-- Embedded whiteboard image -->
-![CC1](./assets/array-reverse3.png);
+![WhiteBoard](./assets/whiteboard.png)
 
 
 # Shift Array
