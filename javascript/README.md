@@ -37,5 +37,22 @@ A math method with a loop and a push to an array that is returned
 
 ## Solution
 <!-- Embedded whiteboard image -->
-![CC1](./code-challenges/arrayShift/assets/shiftArray.png);
+![CC2](./code-challenges/arrayShift/assets/shiftArray.png);
 
+# Array - Binary - Search
+
+### 
+
+- Utilize binary search 
+
+
+## Challenge
+
+- Write a function called BinarySearch which takes in 2 parameters: a sorted array and the search key. Without utilizing any of the built-in methods available to your language, return the index of the array’s element that is equal to the search key, or -1 if the element does not exist.
+
+## Approach & Efficiency
+- Go through the array comparing the key if the key is greater than certain number we get rid of those numbers and repeat from the opposite end until we find our number or if the number is not there we return -1.
+
+## Solution
+<!-- Embedded whiteboard image -->
+![CC3](./code-challenges/arrayShift/assets/CodeChallenge03-FRAME1.jpg);
