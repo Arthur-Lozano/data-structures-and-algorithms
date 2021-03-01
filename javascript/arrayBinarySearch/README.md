@@ -55,4 +55,4 @@ A math method with a loop and a push to an array that is returned
 
 ## Solution
 <!-- Embedded whiteboard image -->
-![CC3](./assets/Code Challenge 03 - Frame 1.jpg);
+![CC3](./assets/CodeChallenge03-Frame1.jpg);
