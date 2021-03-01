@@ -37,7 +37,7 @@ A math method with a loop and a push to an array that is returned
 
 ## Solution
 <!-- Embedded whiteboard image -->
-![CC2](./javascript/code-challenges/arrayShift/assets/shiftArray.png);
+![CC2](../../code-challenges/arrayShift/assets/shiftArray.png);
 
 # Array - Binary - Search
 
