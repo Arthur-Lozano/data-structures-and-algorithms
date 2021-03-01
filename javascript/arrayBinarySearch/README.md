@@ -19,7 +19,7 @@ Be careful of: empty arrays, arrays with only 1, odd numbered count, even number
 
 ## Solution
 <!-- Embedded whiteboard image -->
-![WhiteBoard](./arrays/assets/whiteboard.png)
+![WhiteBoard](./assets/whiteboard.png)
 
 
 # Shift Array
