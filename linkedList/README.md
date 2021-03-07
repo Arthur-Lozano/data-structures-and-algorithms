@@ -15,7 +15,8 @@ Define a method called toString (or __str__ in Python) which takes in no argumen
 "{ a } -> { b } -> { c } -> NULL"
 
 ## Approach & Efficiency
-- Go through the array comparing the key if the key is greater than certain number we get rid of those numbers and repeat from the opposite end until we find our number or if the number is not there we return -1.
+- Create a node then link other nodes via next 
+
 
 ## Solution
 <!-- Embedded whiteboard image -->
