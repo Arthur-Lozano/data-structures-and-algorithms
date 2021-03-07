@@ -18,6 +18,3 @@ Define a method called toString (or __str__ in Python) which takes in no argumen
 - Create a node then link other nodes via next 
 
 
-## Solution
-<!-- Embedded whiteboard image -->
-![CC5](./code-challenges/arrayBinarySearch/assets/CodeChallenge03-FRAME1.jpg);
