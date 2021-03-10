@@ -14,7 +14,19 @@ Define a method called includes which takes any value as an argument and returns
 Define a method called toString (or __str__ in Python) which takes in no arguments and returns a string representing all the values in the Linked List, formatted as:
 "{ a } -> { b } -> { c } -> NULL"
 
+
+
+## Challenge
+- Feature Tasks
+Write the following methods for the Linked List class:
+
+.append(value) which adds a new node with the given value to the end of the list
+.insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node
+.insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
+
+
+
 ## Approach & Efficiency
-- Create a node then link other nodes via next 
+- Uitlize the value and next properties of the nodes within a linklist to insert before, after, and append new nodes
 
 
