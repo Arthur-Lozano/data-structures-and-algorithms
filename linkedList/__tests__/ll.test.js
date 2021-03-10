@@ -59,9 +59,16 @@ describe('LINKED LIST', () => {
   it('Will return true when finding a value within the linked list that exists', () => {
     let list = new LinkedList();
     let first = 'first';
-    list.append(first); // added an item to the list
+    let second = 'second';
+    list.append(first); // add an item to the list
+    list.append(second);
+    list.append(3);
+    list.append(4);
 
-    expect(list.head.value).toBeTruthy();//Might need to look at this truthy method again
+    while (list !==null) {
+      return true;
+    }
+    expect(list).toEqual(true);
   });
 
   //Will return false when searching for a value in the linked list that does not exist
