@@ -91,6 +91,7 @@ class LinkedList {
       counter++;
       current = current.next;
     }
+    
     return counter;
   }
 
