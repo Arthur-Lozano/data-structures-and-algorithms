@@ -75,11 +75,41 @@ class LinkedList {
       this.head = node;
     } else {
       while (current) {//current is an object. with value and next property
-        if(current.value === value)
-        node.next = current.next;
+        if (current.value === value)
+          node.next = current.next;
         current.next = node;//current.next gets entire new node {value:999, next 200}
         return this;
-      } 
+      }
+    }
+  }
+
+  lenMethod() { // get lenght of LL
+    let current = this.head;
+    let counter = 0;
+
+    while (current !== null) {
+      counter++;
+      current = current.next;
+    }
+    return counter;
+  }
+
+  fromEnd(k){
+    let len = lenMethod();
+    let current = this.head;
+
+    if (!this.head) {
+      this.head = node.next;
+      node++;
+    } else {
+      while (current) {
+        if (current.value === data) {
+          node.data = current.next;
+          current.next = node;
+          return data;
+        }
+      }
+    }
   }
 
 
