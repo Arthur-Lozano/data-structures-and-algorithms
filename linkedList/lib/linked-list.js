@@ -91,8 +91,11 @@ class LinkedList {
       counter++;
       current = current.next;
     }
+    
     return counter;
   }
+
+
 
   fromEnd(k){
     let len = lenMethod();
