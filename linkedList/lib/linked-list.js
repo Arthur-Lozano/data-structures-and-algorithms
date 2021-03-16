@@ -91,28 +91,25 @@ class LinkedList {
       counter++;
       current = current.next;
     }
-    
+
     return counter;
   }
 
 
-
-  fromEnd(k){
-    let len = lenMethod();
+  //From the nth
+  fromEnd(k) {
+    let len = this.lenMethod();
     let current = this.head;
 
-    if (!this.head) {
-      this.head = node.next;
-      node++;
-    } else {
-      while (current) {
-        if (current.value === data) {
-          node.data = current.next;
-          current.next = node;
-          return data;
-        }
-      }
+    while (current) {
+      if (len === k) {
+        return current.value;
+      } else {
+        len--;
+        current = current.next;
+      } return false;
     }
+    return false;
   }
 
 
