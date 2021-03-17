@@ -91,9 +91,9 @@ class LinkedList {
       counter++;
       current = current.next;
     }
-
     return counter;
   }
+
 
 
   //From the nth
@@ -111,6 +111,7 @@ class LinkedList {
     }
     return false;
   }
+
 
 
   toString() {

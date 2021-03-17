@@ -51,6 +51,3 @@ Write the following methods for the Linked List class:
 
 - Create a method to find the length of the Linked List
 - Find the k from the end and return the value
-
-![CC2](../assets/nth.jpg);
-
