@@ -39,7 +39,7 @@ class Queue {
   }
 
   peek() {
-    return this.stack[this.stack.length - 1];
+    return this.front;
   }
 
   isEmpty() {
@@ -52,14 +52,14 @@ class Queue {
 
 }
 
-module.exprorts = Queue;
+module.exports = Queue;
 
 
-let q = new Queue;
-q.enqueue(10);
-q.enqueue(20);
-q.enqueue(30);
+// let q = new Queue;
+// q.enqueue(10);
+// q.enqueue(20);
+// q.enqueue(30);
 
-q.dequeue();
+// q.dequeue();
 
-console.log(q);
+// console.log(q);
