@@ -11,12 +11,14 @@ class Stack {
   push(item) {
     this.storage.push(item);
     this.top = item;
+    return this;
   }
 
 
   pop() {
-    let item = this.storage.pop();
+    this.storage.pop();
     this.top = !this.storage.length ? null : this.storage[this.storage.length - 1];
+    return this;
   }
 
 

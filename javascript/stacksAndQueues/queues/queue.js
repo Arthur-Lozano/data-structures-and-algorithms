@@ -2,9 +2,8 @@
 
 class Queue {
   constructor() {
-    this.front = null;
-    this.rear = null;
-    this.storage = [];
+    this.items = [];
+    this.count = 0;
   }
 
   enqueue(item) {

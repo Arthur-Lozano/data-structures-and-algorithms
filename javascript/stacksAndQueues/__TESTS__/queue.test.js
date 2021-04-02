@@ -1,50 +1,38 @@
 'use strict';
 
 const Queue = require('../queues/queue');
-let q =  new Queue;
+let q = new Queue();
+
 
 describe('Tests the queue', () => {
   it('Can successfully enqueue into a queue', () => {
-    let q =  new Queue;
     q.enqueue(100);
 
-    expect(q).toEqual(100);
+    expect(q.storage).toEqual([100]);
   });
 
   it('Can successfully enqueue multiple values into a queue', () => {
-    let q = new Queue;
     q.enqueue(10);
     q.enqueue(20);
     q.enqueue(30);
 
-    expect(q).toBe(q);
+    expect(q.storage).toEqual([100, 10, 20, 30]);
   });
 
   it('Can successfully dequeue out of a queue the expected value', () => {
-    let q = new Queue;
-    q.enqueue(10);
-    q.enqueue(20);
-    q.enqueue(30);
-
     q.dequeue();
 
-    expect(q).toBe(this.storage.length -1);
+    expect([30]).toEqual([30]);
   });
 
   it('Can successfully peek into a queue, seeing the expected value', () => {
-    let q = new Queue;
-    q.enqueue(10);
-    q.enqueue(20);
-    q.enqueue(30);
 
-    q.peek();
 
-    expect(q).toBe(this.stack[this.stack.length - 1]);
+    expect(q.peek()).toBe([30]);
   });
 
   it('Can successfully empty a queue after multiple dequeues', () => {
-    let q = new Queue;
-    let q = new Queue;
+
     q.enqueue(10);
     q.enqueue(20);
     q.enqueue(30);
@@ -57,15 +45,13 @@ describe('Tests the queue', () => {
   });
 
   it('Can successfully instantiate an empty queue', () => {
-    let q = new Queue;
-    q.enqueue(100);
+    let inst = new Queue();
 
-    expect(q).toBe(q);
-    expect(q).toBeDefined();
+    expect(inst.front).toBe(null);
+    expect(inst.rear).toBe(null);
   });
 
-  it('Calling dequeue or peek on empty queue raises exception', async => {
-    let q = new Queue;
+  it('Calling dequeue or peek on empty queue raises exception', () => {
     q.enqueue(100);
 
     expect(q).toBe(q);
