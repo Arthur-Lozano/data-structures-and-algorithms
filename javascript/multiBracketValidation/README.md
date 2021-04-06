@@ -20,4 +20,4 @@
 
 <!-- Embedded whiteboard image -->
 
-![CC13](./assets/CC3.jpg)
+![CC13](../assets/CC3.jpg)
