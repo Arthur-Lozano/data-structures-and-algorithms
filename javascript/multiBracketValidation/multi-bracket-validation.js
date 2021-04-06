@@ -4,7 +4,7 @@
 
 
 
-function multiBracketValidation(input) {
+let multiBracketValidation = input => {
 
   let stack = [];
   let symbols = {
