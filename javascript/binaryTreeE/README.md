@@ -4,7 +4,7 @@
 
 ## Challenge Description
 
-- Return max value stored in tree
+- Return max value stored in tree.
 
 ## Solution
 
