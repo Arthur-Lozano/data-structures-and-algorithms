@@ -1,0 +1,14 @@
+{
+  "name": "mergesort",
+  "version": "1.0.0",
+  "description": "- [\"Blog\"](https://docs.google.com/presentation/d/1Bj4aame0b3n-o8iHIiWM3pdRwoRTFjRCijGv7pSKcCE/edit?usp=sharing)",
+  "main": "mergeSort.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^26.6.3"
+  }
+}
