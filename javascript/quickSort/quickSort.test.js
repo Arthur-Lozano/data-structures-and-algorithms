@@ -4,7 +4,7 @@ const array1 = [8, 2, 3, 6, 7, 9, 5, 10, 4, 1];
 
 
 
-test('sorts an array', () => {
+test.only('sorts an array', () => {
   expect(quickSort(array)).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
 
 });
