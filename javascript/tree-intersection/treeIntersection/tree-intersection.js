@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 const BST = require('./binary-search-tree.js');
 
@@ -9,7 +9,7 @@ function treeIntersection(bt1, bt2) {
   let nodes2 = bt2.preOrder();
 
   for (let i = 0; i < nodes1.length; i++) {
-    console.log(nodes1[i])
+    console.log(nodes1[i]);
     values[nodes1[i].toString()] = true;
   }
 
