@@ -1,6 +1,6 @@
 'use strict';
 
-const LinkedList = require('./linked-list.js');
+const LinkedList = require('./link-list.js');
 
 // to avoid collisions:
 // 1. Create a NEW hash table with doule the buckets
@@ -49,16 +49,29 @@ class HashMap {
 
   // Return the value for the key from the HT
   get(key) {
+    let current = this.head;
     // 1: hash the key
+    const hash = this.hash(key);
     // 2: Get the value of this.map[hash]
+    if (this.map[hash]) {
+      return this.map[hash];
+    }
     // 3: Traverse the linked list and find the actual one (because ... collisions)
+    while (current) {
+      current = this.map[hash] ? this.map[hash] : hash;
+    }
     // 4: Return what we find
+    return current;
   }
 
   // return a bool if it's in the HT
   has(key) {
     // 1: hash the key
+    const hash = this.hash(key);
     // 2: Get the value of this.map[hash]
+    if (this.map[hash]) {
+      return this.map[hash];
+    }
     // 3: Traverse the linked list and find the actual one (because ... collisions)
     // 4: Return true or false
   }
