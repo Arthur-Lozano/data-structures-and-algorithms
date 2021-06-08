@@ -8,7 +8,7 @@ describe('Merges two Hashmaps', () => {
 
 
   it('Add values to the hash tables', () => {
-    expect(expect(mapLeft.has('enamored')).toBeTruthy());
-    expect(expect(mapRight.has('averse')).toBeTruthy());
+    expect(expect(mapLeft.has('fond')).toBeTruthy());
+    expect(expect(mapRight.has('wrath')).toBeTruthy());
   });
 });
