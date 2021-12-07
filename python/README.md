@@ -22,7 +22,7 @@ Be careful of: empty arrays, arrays with only 1, odd numbered count, even number
 
 <!-- Embedded whiteboard image -->
 
-![WhiteBoard](./codechallenge1/codechallenge1/cc1.png)
+![WhiteBoard](./codeChallenge1/codechallenge1/cc1.png)
 
 
 
