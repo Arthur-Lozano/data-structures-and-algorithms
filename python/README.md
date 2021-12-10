@@ -31,7 +31,7 @@ Be careful of: empty arrays, arrays with only 1, odd numbered count, even number
 
 ## Whiteboard Process
 
-![WhiteBoard](./python/codeChallenge2/insertone/img/n.png)
+![WhiteBoard](./codeChallenge2/insertone/img/n.png)
 
 ## Approach & Efficiency
 
