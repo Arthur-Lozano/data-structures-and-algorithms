@@ -4,7 +4,7 @@
 
 ## Whiteboard Process
 
-![WhiteBoard](.img/n.png)
+![WhiteBoard](./img/n.png)
 
 ## Approach & Efficiency
 
