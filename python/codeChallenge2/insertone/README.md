@@ -4,7 +4,7 @@
 
 ## Whiteboard Process
 
-![WhiteBoard](./codechallenge1/codeChallenge2/insertone/img/n.png)
+![WhiteBoard](.img/n.png)
 
 ## Approach & Efficiency
 
