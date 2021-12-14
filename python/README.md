@@ -52,7 +52,7 @@ Write a function called BinarySearch which takes in 2 parameters: a sorted array
 
 <!-- Embedded whiteboard image -->
 
-[Github PR](./code_challenges/codeChallenge3/whiteboard/cc3.png)
+![WhiteBoard](./code_challenges/codeChallenge3/whiteboard/cc3.png)
 
 ## Approach & Efficiency
 
