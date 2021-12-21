@@ -71,8 +71,8 @@ def test_multiple_insert_to_linked_list():
 
 
 def test_includes():
-    linked_list = LinkedList(Node("10", Node("20", Node("30", Node("40", Node("50"))))))
-    actual = linked_list.includes("30")
+    linked_list = LinkedList(Node(11, Node(12, Node(30, Node(40, Node(50))))))
+    actual = linked_list.includes(30)
     expected = True
     assert actual == expected
 
@@ -80,5 +80,30 @@ def test_includes():
 def test_str():
     linked_list = LinkedList(Node("10", Node("20", Node("30", Node("40", Node("50"))))))
     actual = linked_list.to_string()
-    expected = "{'10'}{'20'} {'30'}{'40'}{'50'} ->None"
+    expected = "{'10'} -> {'20'} -> {'30'} -> {'40'} -> {'50'} -> None"
     assert actual == expected
+
+
+# CC6
+
+
+def test_append():
+    link_list = LinkedList(Node("h", Node("o", Node("o"))))
+    link_list.append("b")
+    actual = link_list.to_string()
+    expected = "{'h'} -> {'o'} -> {'o'} -> {'b'} -> None"
+    assert actual == expected
+
+
+def test_insert_before():
+    link_list = LinkedList(Node("1", Node("3", Node("4"))))
+    link_list.insert_before("3", "2")
+    actual = link_list.__str__()
+    expected = "{'1'} -> {'2'} -> {'3'} -> {'4'} -> NULL"
+
+
+def test_insert_after():
+    link_list = LinkedList(Node("1", Node("2", Node("4"))))
+    link_list.insert_after("2", "3")
+    actual = link_list.__str__()
+    expected = "{'1'} -> {'2'} -> {'3'} -> {'4'} -> NULL"
