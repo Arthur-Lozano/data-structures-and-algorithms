@@ -10,7 +10,7 @@ Write a function called BinarySearch which takes in 2 parameters: a sorted array
 
 <!-- Embedded whiteboard image -->
 
-[Github PR](./whiteboard/cc3.png)
+![WhiteBoard](./whiteboard/cc3.png)
 
 ## Approach & Efficiency
 
