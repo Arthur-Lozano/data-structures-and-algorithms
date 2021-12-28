@@ -107,3 +107,34 @@ def test_insert_after():
     link_list.insert_after("2", "3")
     actual = link_list.__str__()
     expected = "{'1'} -> {'2'} -> {'3'} -> {'4'} -> NULL"
+
+
+# Code challenge 7 to the kth
+
+
+def test_kth_from_end():
+    linked_list = LinkedList(Node("1", (Node("2", Node("3", Node("4"))))))
+    actual = linked_list.kth_from_end(1)
+    expected = "3"
+    assert actual == expected
+
+
+def test_kth_negative():
+    linked_list = LinkedList(Node("1", (Node("2", Node("3", Node("4"))))))
+    actual = linked_list.kth_from_end(-6)
+    expected = "please choose a positive number"
+    assert actual == expected
+
+
+def test_kth_too_large():
+    linked_list = LinkedList(Node("1", (Node("2", Node("3", Node("4"))))))
+    actual = linked_list.kth_from_end(6)
+    expected = "That brings us out of the linked list"
+    assert actual == expected
+
+
+def test_kth_same():
+    link_list = LinkedList(Node(1))
+    actual = link_list.kth_from_end(1)
+    expected = "That brings us out of the linked list"
+    assert actual == expected
