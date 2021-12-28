@@ -39,7 +39,7 @@ def test_insert_to_linked_list():
     # ll.head = apple
     # apple.next = pear
     # pear.next = None
-
+    #
     # [apple] -> [pear] -> None
 
     ll = LinkedList()
