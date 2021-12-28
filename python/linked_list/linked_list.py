@@ -23,15 +23,6 @@ class LinkedList:
                 current = current.next
         return False
 
-    # append
-
-    # def append(self, value):
-    #     current = self.head
-    #     node = Node(value)
-    #     while current is not None:
-    #         current = current.next
-    #     current.append(value)
-
     # insert before
     def append(self, value):
         new_node = Node(value)
@@ -90,3 +81,24 @@ class LinkedList:
             current = current.next
         results += f"None"
         return results
+
+    # Code challenge 7
+
+    def kth_from_end(self, k):
+        length = -1
+        current = self.head
+
+        while current:
+            current = current.next
+            length += 1
+        if k > length:
+            return "That brings us out of the linked list"
+        elif k < 0:
+            return "please choose a positive number"
+        else:
+            current = self.head
+            position = length - k
+
+            for _ in range(0, position):
+                current = current.next
+            return current.value

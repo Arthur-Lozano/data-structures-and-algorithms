@@ -24,7 +24,6 @@ Be careful of: empty arrays, arrays with only 1, odd numbered count, even number
 
 ![WhiteBoard](./codeChallenge1/codechallenge1/cc1.png)
 
-
 # Insert value into middle of list
 
 -   Write a function called insertShiftArray which takes in an array and a value to be added. Without utilizing any of the built-in methods available to your language, return an array with the new value added at the middle index
@@ -39,6 +38,25 @@ Be careful of: empty arrays, arrays with only 1, odd numbered count, even number
 -   Complexity Analysis
     Time Complexity - O(n)
     Space Complexity - O(1)
+
+# Code Challenge 7
+
+# k-th value from the end of a linked list
+
+## Challenge
+
+-   Write the following method for the Linked List class:
+    -   kth from end
+    -   argument: a number, k, as a parameter.
+    -   Return the node’s value that is k places from the tail of the linked list.
+
+## Approach & Efficiency
+-   Time: O(N)
+-   Space: O(N)
+
+## Solution
+
+[LinkedList - k-th value](./linked_list/assets/CodeChallenge7.jpg)
 
 # Binary Search of Sorted Array
 
