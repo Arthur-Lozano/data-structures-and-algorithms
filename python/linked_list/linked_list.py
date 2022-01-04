@@ -124,5 +124,4 @@ class LinkedList:
                 node_two = Node(current_two)
                 result.append(node_two)
                 current_two = current_two.next
-
         return result

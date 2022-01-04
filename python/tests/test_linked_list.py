@@ -154,6 +154,7 @@ def test_zip_list():
 
 
 def test_zip_list_diff_size():
+
     linked_list = LinkedList(Node("1", Node("3", Node("2"))))
     linked_list2 = LinkedList(Node("5", Node("9")))
     zip_list(linked_list, linked_list2)
