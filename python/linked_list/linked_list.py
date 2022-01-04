@@ -102,3 +102,26 @@ class LinkedList:
             for _ in range(0, position):
                 current = current.next
             return current.value
+
+    # Code Challenge 08
+    def zip_list(llone, lltwo):
+
+        # llone = LinkedList()
+        # lltwo = LinkedList()
+
+        current_one = llone.head
+        current_two = lltwo.head
+
+        result = LinkedList()
+
+        while current_one and current_two is not None:
+            if current_one is not None:
+                node_one = Node(current_one)
+                result.append(node_one)
+                current_one = current_one.next
+
+            if current_two is not None:
+                node_two = Node(current_two)
+                result.append(node_two)
+                current_two = current_two.next
+        return result
