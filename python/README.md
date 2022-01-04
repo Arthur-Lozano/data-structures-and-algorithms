@@ -39,7 +39,6 @@ Be careful of: empty arrays, arrays with only 1, odd numbered count, even number
     Time Complexity - O(n)
     Space Complexity - O(1)
 
-
 # Binary Search of Sorted Array
 
 **Author**: Arthur Lozano
@@ -67,7 +66,6 @@ Write a function called BinarySearch which takes in 2 parameters: a sorted array
 
 -   Time O(log n)
 -   O(1)
-
 
 # Code Challenge 6
 
@@ -117,3 +115,27 @@ Write a function called BinarySearch which takes in 2 parameters: a sorted array
 ## Solution
 
 [LinkedList - k-th value](./linked_list/assets/CodeChallenge7.jpg)
+
+# Code Challenge 8
+
+# Zip two linked lists.
+
+## Challenge
+
+-   a function called zip lists
+    -   Arguments: 2 linked lists
+    -   Return: New Linked List, zipped as noted below
+    -   Zip the two linked lists together into one so that the nodes alternate
+    -   between the two lists and return a reference to the the zipped list.
+    -   Try and keep additional space down to O(1)
+    -   You have access to the Node class and all the properties on the Linked List
+    -   class as well as the methods created in previous challenges.
+
+## Approach & Efficiency
+
+-   Time: O(N)
+-   Space: O(N)
+
+## Solution
+
+[LinkedList - zip lists](./linked_list/assets/cc8.png)
