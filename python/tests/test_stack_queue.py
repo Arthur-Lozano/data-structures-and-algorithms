@@ -1,4 +1,4 @@
-from stack_queue.stack_queue import Stack, Queue, Node, IsEmptyError
+from stack_queue.stack_queue import Stack, Queue, IsEmptyError
 import pytest
 
 
@@ -15,8 +15,11 @@ def test_push_mult_values():
     stack.push(1)
     stack.push(2)
     stack.push(3)
+    stack.push(4)
+    stack.push(5)
+
     actual = stack.top.value
-    expected = 3
+    expected = 5
     assert actual == expected
 
 
@@ -63,6 +66,7 @@ def test_empty_stack_raises_exception():
 def test_queue_to_queue():
     q = Queue()
     q.enqueue(1)
+    q.enqueue(2)
     assert q.front.value == 1
 
 
