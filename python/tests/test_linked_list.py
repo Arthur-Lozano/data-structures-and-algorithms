@@ -34,14 +34,6 @@ def test_insert_to_empty_linked_list():
 
 
 def test_insert_to_linked_list():
-    # ll
-    # node1
-    # node2
-    # ll.head = apple
-    # apple.next = pear
-    # pear.next = None
-    #
-    # [apple] -> [pear] -> None
 
     ll = LinkedList()
     # head is none
