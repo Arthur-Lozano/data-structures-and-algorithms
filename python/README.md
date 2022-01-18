@@ -164,3 +164,21 @@ Write a function called BinarySearch which takes in 2 parameters: a sorted array
 -   is empty
     -   Arguments: none
     -   Returns: Boolean indicating whether or not the queue is empty
+
+
+# Stack and queue pseudo
+
+## Challenge
+-   Create a new class called pseudo queue.
+-   Internally, utilize 2 Stack instances to create and manage the queue
+        - Methods:
+            enqueue
+            Arguments: value
+I           nserts value into the PseudoQueue, using a first-in, first-out      -           approach.
+
+        - dequeue
+            Arguments: none
+            Extracts a value from the PseudoQueue, using a first-in, first-out approach.h
+            NOTE: The Stack instances have only push, pop, and peek methods. You should use your own Stack implementation. Instantiate these Stack objects in your PseudoQueue constructor.
+
+
