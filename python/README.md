@@ -39,7 +39,6 @@ Be careful of: empty arrays, arrays with only 1, odd numbered count, even number
     Time Complexity - O(n)
     Space Complexity - O(1)
 
-
 # Binary Search of Sorted Array
 
 **Author**: Arthur Lozano
@@ -67,7 +66,6 @@ Write a function called BinarySearch which takes in 2 parameters: a sorted array
 
 -   Time O(log n)
 -   O(1)
-
 
 # Code Challenge 6
 
@@ -135,3 +133,94 @@ Write a function called BinarySearch which takes in 2 parameters: a sorted array
 
 ![WhiteBoard](./stack_queue_brackets.PNG)
 
+ # Stacks and Queues
+
+-   Created classes for both a stack and queue
+    ß
+
+## Challenge
+
+### Stack
+
+-   Create a Stack class that has a top property. It creates an empty Stack when instantiated.
+-   This object should be aware of a default empty value assigned to top when the stack is created.
+-   The class should contain the following methods:
+    push
+-   Arguments: value
+    -   adds a new node with that value to the top of the stack with an O(1) Time performance.
+-   pop
+    -   Arguments: none
+    -   Returns: the value from node from the top of the stack
+    -   Removes the node from the top of the stack
+    -   Should raise exception when called on empty stack
+-   peek
+    -   Arguments: none
+    -   Returns: Value of the node located at the top of the stack
+    -   Should raise exception when called on empty stack
+    -   is empty
+    -   Arguments: none
+    -   Returns: Boolean indicating whether or not the stack is empty.
+
+### Queue
+
+-   Create a Queue class that has a front property. It creates an empty Queue when instantiated.
+-   This object should be aware of a default empty value assigned to front when the queue is created.
+-   The class should contain the following methods:
+    -   enqueue
+    -   Arguments: value
+    -   adds a new node with that value to the back of the queue with an O(1) Time performance.
+-   dequeue
+    -   Arguments: none
+    -   Returns: the value from node from the front of the queue
+    -   Removes the node from the front of the queue
+    -   Should raise exception when called on empty queue
+-   peek
+    -   Arguments: none
+    -   Returns: Value of the node located at the front of the queue
+    -   Should raise exception when called on empty stack
+-   is empty
+    -   Arguments: none
+    -   Returns: Boolean indicating whether or not the queue is empty
+
+
+# Stack and queue pseudo
+
+## Challenge
+-   Create a new class called pseudo queue.
+-   Internally, utilize 2 Stack instances to create and manage the queue
+        - Methods:
+            enqueue
+            Arguments: value
+I           nserts value into the PseudoQueue, using a first-in, first-out      -           approach.
+
+        - dequeue
+            Arguments: none
+            Extracts a value from the PseudoQueue, using a first-in, first-out approach.h
+            NOTE: The Stack instances have only push, pop, and peek methods. You should use your own Stack implementation. Instantiate these Stack objects in your PseudoQueue constructor.
+
+
+ 
+# Code Challenge 8
+
+# Zip two linked lists.
+
+## Challenge
+
+-   a function called zip lists
+    -   Arguments: 2 linked lists
+    -   Return: New Linked List, zipped as noted below
+    -   Zip the two linked lists together into one so that the nodes alternate
+    -   between the two lists and return a reference to the the zipped list.
+    -   Try and keep additional space down to O(1)
+    -   You have access to the Node class and all the properties on the Linked List
+    -   class as well as the methods created in previous challenges.
+
+## Approach & Efficiency
+
+-   Time: O(N)
+-   Space: O(N)
+
+## Solution
+
+[LinkedList - zip lists](./linked_list/assets/cc8.png)
+ 

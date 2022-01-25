@@ -1,4 +1,5 @@
-from linked_list.linked_list import Node, LinkedList
+from linked_list.linked_list import Node, LinkedList, zip_list
+
 import pytest
 
 
@@ -33,14 +34,6 @@ def test_insert_to_empty_linked_list():
 
 
 def test_insert_to_linked_list():
-    # ll
-    # node1
-    # node2
-    # ll.head = apple
-    # apple.next = pear
-    # pear.next = None
-    #
-    # [apple] -> [pear] -> None
 
     ll = LinkedList()
     # head is none
@@ -137,4 +130,26 @@ def test_kth_same():
     link_list = LinkedList(Node(1))
     actual = link_list.kth_from_end(1)
     expected = "That brings us out of the linked list"
+    assert actual == expected
+
+
+# Code challenge 8
+
+
+def test_zip_list():
+    linked_list = LinkedList(Node("1", Node("3", Node("2"))))
+    linked_list2 = LinkedList(Node("5", Node("9", Node("4"))))
+    zip_list(linked_list, linked_list2)
+    actual = linked_list.__str__()
+    expected = "{'1'} -> {'5'} -> {'3'} -> {'9'} -> {'2'} -> {'4'} -> NULL"
+    assert actual == expected
+
+
+def test_zip_list_diff_size():
+
+    linked_list = LinkedList(Node("1", Node("3", Node("2"))))
+    linked_list2 = LinkedList(Node("5", Node("9")))
+    zip_list(linked_list, linked_list2)
+    actual = linked_list.__str__()
+    expected = "{'1'} -> {'5'} -> {'3'} -> {'9'} -> {'2'} -> {'4'} -> NULL"
     assert actual == expected
