@@ -1,7 +1,6 @@
 open_list = ["[", "{", "("]
 close_list = ["]", "}", ")"]
 
-
 def validate_brackets(str):
         stack=[]
         for i in str:

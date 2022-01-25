@@ -29,3 +29,10 @@ def test_alternate():
     actual = True
     expected = False
     assert actual != expected
+
+    def test_alternate():
+    string = "{"
+    validate_brackets(string)
+    actual = True
+    expected = False
+    assert actual != expected
