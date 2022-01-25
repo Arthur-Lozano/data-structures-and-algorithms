@@ -117,3 +117,21 @@ Write a function called BinarySearch which takes in 2 parameters: a sorted array
 ## Solution
 
 [LinkedList - k-th value](./linked_list/assets/CodeChallenge7.jpg)
+
+# Code Challenge: 13 Stack-queue-brackets
+
+## Challenge
+- Write a function called validate brackets
+- Return: boolean that represents whether or not the brackets in the string are balanced.
+- There are 3 types of brackets:
+- Round Brackets: `()`, Square Brackets: `[]`, Curly Brackets: `{}`
+
+## Big 0
+
+- Time: O(n)
+- Space: O(1)
+
+## Whiteboard
+
+![WhiteBoard](./stack_queue_brackets.PNG)
+
