@@ -1,11 +1,9 @@
 class Node:
-
     def __init__(self, value, next = None):
         self.value = value
         self.next = next
 
 class Stack:
-
     def __init__(self, top = None):
         self.top = top
 
@@ -29,7 +27,6 @@ class Stack:
         return self.top.value
 
 class Queue:
-
     def __init__(self):
         self.front = None
         self.rear = None
@@ -114,3 +111,26 @@ class Dog:
 class Cat:
     def __repr__(self):
         return "I am a Cat"
+
+import unittest
+
+class Test(unittest.TestCase):
+  def test_animal_shelter(self):
+    shelter = AnimalShelter()
+    shelter.enqueue(Cat("Hanzack"))
+    shelter.enqueue(Dog("Pluto"))
+    shelter.enqueue(Cat("Garfield"))
+    shelter.enqueue(Cat("Tony"))
+    shelter.enqueue(Dog("Clifford"))
+    shelter.enqueue(Dog("Blue"))
+    self.assertEqual(str(shelter.dequeueAny()), "Hanzack")
+    self.assertEqual(str(shelter.dequeueAny()), "Garfield")
+    self.assertEqual(str(shelter.dequeueDog()), "Pluto")
+    self.assertEqual(str(shelter.dequeueDog()), "Clifford")
+    self.assertEqual(str(shelter.dequeueCat()), "Tony")
+    self.assertEqual(str(shelter.dequeueCat()), "None")
+    self.assertEqual(str(shelter.dequeueAny()), "Blue")
+    self.assertEqual(str(shelter.dequeueAny()), "None")
+
+if __name__ == "__main__":
+  unittest.main()
