@@ -131,7 +131,7 @@ Write a function called BinarySearch which takes in 2 parameters: a sorted array
 
 ## Whiteboard
 
-![WhiteBoard](./stack_queue_brackets.PNG)
+![WhiteBoard](./assets/stack_queue_brackets.PNG)
 
  # Stacks and Queues
 
