@@ -224,5 +224,5 @@ I           nserts value into the PseudoQueue, using a first-in, first-out      
 
 ## Whiteboard
 
-![WhiteBoard](./stack_queue_brackets/assets/stack_queue_brackets.PNG)
+![WhiteBoard](./stack_queue_brackets/stack_queue_brackets.PNG)
 
