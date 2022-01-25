@@ -1,9 +1,9 @@
 import pytest
-from code_challenges.stack_queue_brackets.stack_queue_brackets import validate_brackets
+from stack_queue_brackets.stack_queue_brackets import validate_brackets
 
 
 def test_square():
-    str = '[lemon]'
+    str = '[hoobs]'
     validate_brackets(str)
     actual = True
     excepted = True
@@ -17,7 +17,7 @@ def test_brackets():
     assert actual == expected
 
 def test_brackets_false():
-    string = "{This test should true}{}"
+    string = "{This returns true}{}"
     validate_brackets(string)
     actual = True
     expected = True
