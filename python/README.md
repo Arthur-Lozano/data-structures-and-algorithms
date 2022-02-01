@@ -116,8 +116,26 @@ Write a function called BinarySearch which takes in 2 parameters: a sorted array
 
 [LinkedList - k-th value](./linked_list/assets/CodeChallenge7.jpg)
 
+# Code Challenge: 13 Stack-queue-brackets
 
- # Stacks and Queues
+## Challenge
+
+-   Write a function called validate brackets
+-   Return: boolean that represents whether or not the brackets in the string are balanced.
+-   There are 3 types of brackets:
+-   Round Brackets: `()`, Square Brackets: `[]`, Curly Brackets: `{}`
+
+## Big 0
+
+-   Time: O(n)
+-   Space: O(1)
+
+## Whiteboard
+
+![WhiteBoard](./stack_queue_brackets.PNG)
+
+
+# Stacks and Queues
 
 -   Created classes for both a stack and queue
     
@@ -166,24 +184,21 @@ Write a function called BinarySearch which takes in 2 parameters: a sorted array
     -   Arguments: none
     -   Returns: Boolean indicating whether or not the queue is empty
 
-
 # Stack and queue pseudo
 
 ## Challenge
+
 -   Create a new class called pseudo queue.
--   Internally, utilize 2 Stack instances to create and manage the queue
-        - Methods:
-            enqueue
-            Arguments: value
-I           nserts value into the PseudoQueue, using a first-in, first-out      -           approach.
+-   Internally, utilize 2 Stack instances to create and manage the queue - Methods:
+    enqueue
+    Arguments: value
+    I nserts value into the PseudoQueue, using a first-in, first-out - approach.
 
-        - dequeue
-            Arguments: none
-            Extracts a value from the PseudoQueue, using a first-in, first-out approach.h
-            NOTE: The Stack instances have only push, pop, and peek methods. You should use your own Stack implementation. Instantiate these Stack objects in your PseudoQueue constructor.
+            - dequeue
+                Arguments: none
+                Extracts a value from the PseudoQueue, using a first-in, first-out approach.h
+                NOTE: The Stack instances have only push, pop, and peek methods. You should use your own Stack implementation. Instantiate these Stack objects in your PseudoQueue constructor.
 
-
- 
 # Code Challenge 8
 
 # Zip two linked lists.
@@ -207,6 +222,37 @@ I           nserts value into the PseudoQueue, using a first-in, first-out      
 ## Solution
 
 [LinkedList - zip lists](./linked_list/assets/cc8.png)
+
+# Code Challenge 15
+
+# Binary Tree and BST Implementation
+
+## Challenge
+
+## Binary Tree
+
+-   Create a Binary Tree class
+-   Define a method for each of the depth first traversals:
+    -   pre order
+    -   in order
+    -   post order
+
+### which returns an array of the values, ordered appropriately.
+
+## Binary Search Tree
+
+-   Create a Binary Search Tree class
+
+    -   sub-class (or your languages equivalent) of the Binary Tree Class, with the following additional methods:
+    -   Add
+
+        -   Arguments: value
+        -   Return: nothing
+        -   Adds a new node with that value in the correct location in the binary search tree.
+
+    -   Contains
+    -   Argument: value
+    -   Returns: boolean indicating whether or not the value is in the tree at least once.
  
  
  # Code Challenge: 13 Stack-queue-brackets
