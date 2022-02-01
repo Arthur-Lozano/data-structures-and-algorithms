@@ -136,3 +136,22 @@ class BinarySearchTree(BinaryTree):
                 return True
             else:
                 return False
+
+    # Find Max Value Method: Traverse a Binary Tree and find the max value.
+    def max_value(self):
+        max_value = self.root.value
+
+        def traverse(root):
+            nonlocal max_value
+
+            if root.value > max_value:
+                max_value = root.value
+
+            if root.left:
+                traverse(root.left)
+
+            if root.right:
+                traverse(root.right)
+
+        traverse(self.root)
+        return max_value

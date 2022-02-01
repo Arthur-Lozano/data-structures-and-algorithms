@@ -225,10 +225,6 @@ Write a function called BinarySearch which takes in 2 parameters: a sorted array
 
 # Code Challenge 15
 
-# Binary Tree and BST Implementation
-
-## Challenge
-
 ## Binary Tree
 
 -   Create a Binary Tree class
@@ -253,6 +249,18 @@ Write a function called BinarySearch which takes in 2 parameters: a sorted array
     -   Contains
     -   Argument: value
     -   Returns: boolean indicating whether or not the value is in the tree at least once.
+
+# Code Challenge 16
+
+### Maximum Value in a Binary Tree
+
+-   find maximum value
+    -   Arguments: none
+    -   Returns: number
+
+# Max Value Implementation
+
+[Trees-MaxValue](./trees/assets/cc16.png)
  
  
  # Code Challenge: 13 Stack-queue-brackets
