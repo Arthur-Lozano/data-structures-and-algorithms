@@ -1,4 +1,5 @@
 from trees.tree import Node, BinaryTree, BinarySearchTree
+from trees.breadthfirst import breadth
 import pytest
 
 
@@ -135,13 +136,13 @@ def example_tree():
 
 
 def test_breadth_frist(example_tree):
-    actual = example_tree.breadth()
+    actual = breadth()
     expected = [1, 2, 2, 3, 3, 3, 3]
     assert actual == expected
 
 
 def test_breadth_first_negative(negative_tree):
-    actual = negative_tree.breadth()
+    actual = breadth()
     expected = [-1, -2, -2, -3, -3, -3, -3]
     assert actual == expected
 
