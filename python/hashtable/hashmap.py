@@ -1,4 +1,5 @@
 from hash_table import HashTable
+import re
 
 
 def first_repeated_word(string):
