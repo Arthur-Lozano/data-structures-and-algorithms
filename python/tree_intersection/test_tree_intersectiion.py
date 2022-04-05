@@ -1,6 +1,6 @@
 import pytest
 from tree_intersection import tree_intersection
-from trees.binary_tree import BinaryTree, Node
+from tree import BinaryTree, Node
 
 
 def test_proof_of_life():

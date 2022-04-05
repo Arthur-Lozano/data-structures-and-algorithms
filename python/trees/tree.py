@@ -1,3 +1,6 @@
+from stack_queue.stack_queue import Queue, Node
+
+
 class Node:
     """
     Create a Node which has properties of the value stored in the Node, left and right child nodes.
@@ -9,24 +12,33 @@ class Node:
         self.right = right
 
 
+# //////////////////////////////////////////////////////////////////#
+
+
 class BinaryTree:
+    """
+    Create a Binary Class Tree, which has methods to traverse the tree called preorder, inorder, and post order. This will return the values in binary tree in the correct order.
+    """
+
     def __init__(self, root=None):
         self.root = root
 
+    # Preorder Method: Traverse a Binary Tree from root >> left >> right.
     def pre_order(self):
 
         elements = []
 
+        # check it root value is empty before running the traverse method, this will return a string and end the pre_order function, else run the traverse method.
         if self.root is None:
             return "Empty Tree"
 
         def traverse(root):
 
             elements.append(root.value)
-
+            # If root node has a left value (True), recursively call the traverse method until it returns None.
             if root.left:
                 traverse(root.left)
-
+            # If root node has a right value (True), recrusively call the traverse helper method unit it returns None.
             if root.right:
                 traverse(root.right)
 
@@ -78,6 +90,50 @@ class BinaryTree:
         traverse(self.root)
 
         return elements
+
+    # Find Max Value Method: Traverse a Binary Tree and find the max value.
+    def max_value(self):
+        max_value = self.root.value
+
+        def traverse(root):
+            nonlocal max_value
+
+            if root.value > max_value:
+                max_value = root.value
+
+            if root.left:
+                traverse(root.left)
+
+            if root.right:
+                traverse(root.right)
+
+        traverse(self.root)
+        return max_value
+
+    # Breadth-first: Traverse a Binary Tree breadth-first
+    def breadth(self):
+
+        root = self.root
+
+        if root is None:
+            return "Empty Tree"
+
+        else:
+            order = []
+            queue = Queue()
+            queue.enqueue(root)
+
+            while not queue.is_empty():
+                front = queue.dequeue()
+                order.append(front.value)
+                if front.left:
+                    queue.enqueue(front.left)
+                if front.right:
+                    queue.enqueue(front.left)
+        return order
+
+
+# /////////////////////////////////////////////////////////////////////#
 
 
 class BinarySearchTree(BinaryTree):
@@ -136,22 +192,3 @@ class BinarySearchTree(BinaryTree):
                 return True
             else:
                 return False
-
-    # Find Max Value Method: Traverse a Binary Tree and find the max value.
-    def max_value(self):
-        max_value = self.root.value
-
-        def traverse(root):
-            nonlocal max_value
-
-            if root.value > max_value:
-                max_value = root.value
-
-            if root.left:
-                traverse(root.left)
-
-            if root.right:
-                traverse(root.right)
-
-        traverse(self.root)
-        return max_value
