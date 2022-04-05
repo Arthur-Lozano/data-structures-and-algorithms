@@ -14,6 +14,7 @@ class Stack:
         # this points the new node to top of stack
         new_node.next = self.top
         # assign new_node to the top of stack
+        # This
         self.top = new_node
 
     def pop(self):

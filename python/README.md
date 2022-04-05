@@ -261,6 +261,41 @@ Write a function called BinarySearch which takes in 2 parameters: a sorted array
 # Max Value Implementation
 
 [Trees-MaxValue](./trees/assets/cc16.png)
+
+# Code Challenge: 17 Tree Breadth First
+
+## Write a function called breadth first
+
+-   Arugment: tree
+-   Return: list of all values in the tree in the order they were encountered
+-   Note: traverse the input tree using a Breadth-first approach
+
+### Big 0
+
+-   Time: O(n)
+-   Space: O(1)
+
+
+
+# Code Challenge: 18 Fizz Buzz Tree
+## Write a function called fizz buzz tree
+
+- Arguments: k-ary tree
+- Return: new k-ary tree
+
+### Feature Tasks
+
+- Determine whether or not the value of each node is divisible by 3, 5 or both. Create a new tree with the same structure as the original, but the values modified as follows:
+
+- If the value is divisible by 3, replace the value with “Fizz”
+
+- If the value is divisible by 5, replace the value with “Buzz”
+
+- If the value is divisible by 3 and 5, replace the value with “FizzBuzz”
+
+- If the value is not divisible by 3 or 5, simply turn the number into a String.
+
+[fizz-buzz-tree](./assets/cc18.png)
  
  
  # Code Challenge: 13 Stack-queue-brackets
