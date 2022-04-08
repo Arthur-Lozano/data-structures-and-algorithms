@@ -17,4 +17,4 @@ def flights(city_list):
         if found == False:
             return False
 
-    return True, weight
+    return True, weight 
