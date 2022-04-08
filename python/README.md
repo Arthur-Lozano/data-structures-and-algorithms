@@ -134,10 +134,11 @@ Write a function called BinarySearch which takes in 2 parameters: a sorted array
 
 ![WhiteBoard](./stack_queue_brackets.PNG)
 
+
 # Stacks and Queues
 
 -   Created classes for both a stack and queue
-    ß
+    
 
 ## Challenge
 
@@ -295,3 +296,22 @@ Write a function called BinarySearch which takes in 2 parameters: a sorted array
 - If the value is not divisible by 3 or 5, simply turn the number into a String.
 
 [fizz-buzz-tree](./assets/cc18.png)
+ 
+ 
+ # Code Challenge: 13 Stack-queue-brackets
+
+## Challenge
+- Write a function called validate brackets
+- Return: boolean that represents whether or not the brackets in the string are balanced.
+- There are 3 types of brackets:
+- Round Brackets: `()`, Square Brackets: `[]`, Curly Brackets: `{}`
+
+## Big 0
+
+- Time: O(n)
+- Space: O(1)
+
+## Whiteboard
+
+![WhiteBoard](./stack_queue_brackets/stack_queue_brackets.PNG)
+
